@@ -12,13 +12,13 @@
 
 #define file "data.txt"
 #define LEN sizeof(struct  student)
-#define FORMAT "%-8d%-15s%5.1f%12.1f%10.1f%9.2f\n"
+#define FORMAT "%-8d%-s\t%12.1f%12.1f%10.1f%9.2f\n"
 #define DATA stu[i].num,stu[i].name,stu[i].elec,stu[i].expe,stu[i].requ,stu[i].sum
 
 
 struct student{
     int num;/*number*/
-    char name[15];/*name*/
+    char name[25];/*name*/
     double elec;/*elective*/
     double expe;/*experiment*/
     double requ;/*required*/
@@ -101,7 +101,7 @@ void in()
 
     system("clear");
 
-    if ((fp = fopen(file, "a+")) == NULL)/*open the file*/
+    if ((fp = fopen(file, "r+")) == NULL)/*open the file*/
     {
         printf("can not open.\n");
         return;
