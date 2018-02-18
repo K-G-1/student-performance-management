@@ -101,7 +101,7 @@ void in()
 
     system("clear");
 
-    if ((fp = fopen(file, "r+")) == NULL)/*open the file*/
+    if ((fp = fopen(file, "rw")) == NULL)/*open the file*/
     {
         printf("can not open.\n");
         return;
